@@ -53,27 +53,10 @@ public class Movimientorotacion : MonoBehaviour
                 //this.transform.localEulerAngles = vectorRotacion;
                 this.transform.Rotate(vectorRotacion,Space.Self);
             }
-            
         }
 
         if(this.tag=="player2")
         {
-            if (Input.GetKey(KeyCode.W))
-            {
-
-                Vector3 direction = (transform.forward * 1).normalized;
-                rigidbody.velocity = direction * movementSpeed;
-            }
-            else
-            {
-                rigidbody.velocity = Vector3.zero;
-            }
-
-            if (Input.GetKey(KeyCode.S))
-            {
-                Vector3 direction = (transform.forward * -1).normalized;
-                rigidbody.velocity = direction * movementSpeed;
-            }
             if (Input.GetKey(KeyCode.D))
             {
                 vectorRotacion =new Vector3(0,speed*Time.deltaTime,0);
