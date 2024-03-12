@@ -5,23 +5,23 @@ using UnityEngine.UI;
 public class PuertaDestruir : MonoBehaviour
 {
 
-    public GameObject PanelPP1;
+    public GameObject Panel1PP1;
+
     private void OnTriggerEnter(Collider other)
     {
-
-        PanelPP1.SetActive(true);
-
+        Time.timeScale = 0f;
+        Panel1PP1.SetActive(true);
         
     }
-    void update ()
+    void Update ()
     {
-
-            if (Input.GetKey(KeyCode.K))
-            {
-                PanelPP1.SetActive(false);
+        {  
+            if (Input.GetKeyDown(KeyCode.K))
+            {   Time.timeScale = 1f;
+                Panel1PP1.SetActive(false);
                 Destroy(gameObject);
             }
-        
+        }
     }
 
 }

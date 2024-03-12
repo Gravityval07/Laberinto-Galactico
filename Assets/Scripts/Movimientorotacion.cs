@@ -9,6 +9,9 @@ public class Movimientorotacion : MonoBehaviour
     private new Rigidbody rigidbody;
     public float movementSpeed;
     Vector3 velocity = Vector3.zero;
+    public GameObject PanelPP1;
+    public GameObject PanelPP2;
+    public Vector3 lastCheckpoint;
 
     void Start()
     {
@@ -53,6 +56,13 @@ public class Movimientorotacion : MonoBehaviour
                 //this.transform.localEulerAngles = vectorRotacion;
                 this.transform.Rotate(vectorRotacion,Space.Self);
             }
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                PanelPP1.SetActive(false);
+                Time.timeScale = 1f;
+                transform.position = lastCheckpoint;
+
+            }
         }
 
         if(this.tag=="player2")
@@ -70,9 +80,26 @@ public class Movimientorotacion : MonoBehaviour
                 //this.transform.localEulerAngles = vectorRotacion;
                 this.transform.Rotate(vectorRotacion,Space.Self);
             }
+
+            if (Input.GetKey(KeyCode.W))
+            {
+                Vector3 direction = (transform.forward * 1).normalized;
+                rigidbody.velocity = direction * movementSpeed;
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                Vector3 direction = (transform.forward * -1).normalized;
+                rigidbody.velocity = direction * movementSpeed;
+            }
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                PanelPP2.SetActive(false);
+                Time.timeScale = 1f;
+                //transform.position = lastCheckpoint;
+
+            }
         }
-       
-       
     }
 }
 
