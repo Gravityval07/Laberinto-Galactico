@@ -11,5 +11,13 @@ public class Checkpoint : MonoBehaviour
             other.GetComponent<Movimientorotacion>().lastCheckpoint = GetComponent<Transform>().position;
             Destroy(gameObject);
         }
+
+        if (other.CompareTag("player2"))
+        {
+            other.GetComponent<Movimientorotacion>().lastCheckpoint = GetComponent<Transform>().position;
+            Destroy(gameObject);
+        }
     }
+
+        
 }

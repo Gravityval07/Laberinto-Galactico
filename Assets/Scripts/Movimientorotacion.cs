@@ -92,11 +92,11 @@ public class Movimientorotacion : MonoBehaviour
                 Vector3 direction = (transform.forward * -1).normalized;
                 rigidbody.velocity = direction * movementSpeed;
             }
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 PanelPP2.SetActive(false);
                 Time.timeScale = 1f;
-                //transform.position = lastCheckpoint;
+                transform.position = lastCheckpoint;
 
             }
         }

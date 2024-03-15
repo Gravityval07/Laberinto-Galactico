@@ -15,13 +15,11 @@ public class PuertaDestruir : MonoBehaviour
     }
     void Update ()
     {
-        {  
             if (Input.GetKeyDown(KeyCode.K))
             {   Time.timeScale = 1f;
                 Panel1PP1.SetActive(false);
                 Destroy(gameObject);
             }
-        }
     }
 
 }
