@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 [System.Serializable]
-
 public class Datos : System.Object
 {
 
