@@ -7,9 +7,9 @@ using System.IO;
 public class Checkpoint : MonoBehaviour
 {
     public int indice;
-    public string pregunta;
+    public Image[] pregunta;
     public GameObject CanvasPreguntas;
-    public Text contenedorPregunta;
+    public Image[] contenedorPregunta;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,19 +17,19 @@ public class Checkpoint : MonoBehaviour
         {
             other.GetComponent<Movimientorotacion>().lastCheckpoint = GetComponent<Transform>().position;
             Destroy(gameObject);
-            pregunta = GameObject.Find("gameManager").GetComponent<gameManager>().misDatos.preguntas[indice];
+            //pregunta = GameObject.Find("gameManager").GetComponent<gameManager>().misDatos.preguntas[indice];
             CanvasPreguntas.SetActive(true);
-            contenedorPregunta.text = pregunta;
+            contenedorPregunta = pregunta;
         }
 
-        if (other.CompareTag("player2"))
+        /*if (other.CompareTag("player2"))
         {
             other.GetComponent<Movimientorotacion>().lastCheckpoint = GetComponent<Transform>().position;
             Destroy(gameObject);
             pregunta = GameObject.Find("gameManager").GetComponent<gameManager>().misDatos.preguntas[indice];
             CanvasPreguntas.SetActive(true);
             contenedorPregunta.text = pregunta;
-        }
+        }*/
     }
 
         
