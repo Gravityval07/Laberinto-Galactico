@@ -9,8 +9,9 @@ public class Movimientorotacion : MonoBehaviour
     private new Rigidbody rigidbody;
     public float movementSpeed;
     Vector3 velocity = Vector3.zero;
-    public GameObject PanelPP1;
     public GameObject PanelPP2;
+    public GameObject PanelPP1;
+    
     public Vector3 lastCheckpoint;
 
     void Start()
@@ -69,6 +70,7 @@ public class Movimientorotacion : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.D))
             {
+                
                 vectorRotacion =new Vector3(0,speed*Time.deltaTime,0);
                 //this.transform.localEulerAngles = vectorRotacion;
                 this.transform.Rotate(vectorRotacion,Space.Self);

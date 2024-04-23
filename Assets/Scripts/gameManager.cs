@@ -8,12 +8,14 @@ public class gameManager : MonoBehaviour
 {
     public Datos misDatos;
     public GameObject panelUI;
+    public GameObject canvasPreguntas;
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
-        GameObject canvas = GameObject.Find("Canvas");
-        DontDestroyOnLoad(canvas.gameObject);
+        DontDestroyOnLoad(canvasPreguntas.gameObject);
+
+        
 
         string filePat = Application.streamingAssetsPath + "/" + "data1.json";
 
@@ -26,6 +28,8 @@ public class gameManager : MonoBehaviour
             Debug.Log(s);
             File.WriteAllText(filePat, s);
         }
+
+        
     }
 
     public void guardaDatos()

@@ -23,7 +23,7 @@ public class Datos : System.Object
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
