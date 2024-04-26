@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -881,6 +881,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 0}
   txtPregunta1: {fileID: 1542238974}
   txtPregunta2: {fileID: 0}
+  contadorPreguntas: 0
 --- !u!4 &235215290
 Transform:
   m_ObjectHideFlags: 0
@@ -2369,6 +2370,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 1915679218}
   txtPregunta1: {fileID: 0}
   txtPregunta2: {fileID: 1494413012}
+  contadorPreguntas: 0
 --- !u!65 &458020088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3860,8 +3862,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vectorRotacion: {x: 0, y: 0, z: 0}
-  speed: 60
-  movementSpeed: 3
+  speed: 200
+  movementSpeed: 4
   PanelPP2: {fileID: 0}
   PanelPP1: {fileID: 0}
   lastCheckpoint: {x: 0, y: 0, z: 0}
@@ -4016,6 +4018,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 1915679218}
   txtPregunta1: {fileID: 0}
   txtPregunta2: {fileID: 1494413012}
+  contadorPreguntas: 0
 --- !u!65 &785654822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5700,6 +5703,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 0}
   txtPregunta1: {fileID: 1542238974}
   txtPregunta2: {fileID: 0}
+  contadorPreguntas: 0
 --- !u!4 &1002295184
 Transform:
   m_ObjectHideFlags: 0
@@ -6140,6 +6144,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 1915679218}
   txtPregunta1: {fileID: 0}
   txtPregunta2: {fileID: 1494413012}
+  contadorPreguntas: 0
 --- !u!65 &1118513104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8757,6 +8762,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 0}
   txtPregunta1: {fileID: 1542238974}
   txtPregunta2: {fileID: 0}
+  contadorPreguntas: 0
 --- !u!4 &1598678318
 Transform:
   m_ObjectHideFlags: 0
@@ -8911,6 +8917,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 1915679218}
   txtPregunta1: {fileID: 0}
   txtPregunta2: {fileID: 1494413012}
+  contadorPreguntas: 0
 --- !u!65 &1649099150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9149,8 +9156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vectorRotacion: {x: 0, y: 0, z: 0}
-  speed: 60
-  movementSpeed: 3
+  speed: 200
+  movementSpeed: 4
   PanelPP2: {fileID: 0}
   PanelPP1: {fileID: 0}
   lastCheckpoint: {x: 0, y: 0, z: 0}
@@ -9366,6 +9373,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 0}
   txtPregunta1: {fileID: 1542238974}
   txtPregunta2: {fileID: 0}
+  contadorPreguntas: 0
 --- !u!4 &1736765488
 Transform:
   m_ObjectHideFlags: 0
@@ -9701,6 +9709,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 1915679218}
   txtPregunta1: {fileID: 0}
   txtPregunta2: {fileID: 1494413012}
+  contadorPreguntas: 0
 --- !u!65 &1795725240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9963,6 +9972,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 1915679218}
   txtPregunta1: {fileID: 0}
   txtPregunta2: {fileID: 1494413012}
+  contadorPreguntas: 0
 --- !u!65 &1831972108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10153,6 +10163,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 0}
   txtPregunta1: {fileID: 1542238974}
   txtPregunta2: {fileID: 0}
+  contadorPreguntas: 0
 --- !u!65 &1843667198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10492,6 +10503,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 1915679218}
   txtPregunta1: {fileID: 0}
   txtPregunta2: {fileID: 1494413012}
+  contadorPreguntas: 0
 --- !u!1 &1915679218
 GameObject:
   m_ObjectHideFlags: 0
@@ -11001,6 +11013,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 0}
   txtPregunta1: {fileID: 1542238974}
   txtPregunta2: {fileID: 0}
+  contadorPreguntas: 0
 --- !u!4 &2041022423
 Transform:
   m_ObjectHideFlags: 0
@@ -11101,6 +11114,7 @@ MonoBehaviour:
     preguntas: []
   panelUI: {fileID: 1453929045}
   canvasPreguntas: {fileID: 1775899505}
+  chPreguntas: 
 --- !u!4 &2053619633
 Transform:
   m_ObjectHideFlags: 0
@@ -11198,6 +11212,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 0}
   txtPregunta1: {fileID: 1542238974}
   txtPregunta2: {fileID: 0}
+  contadorPreguntas: 0
 --- !u!4 &2057768949
 Transform:
   m_ObjectHideFlags: 0
@@ -11300,6 +11315,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 1915679218}
   txtPregunta1: {fileID: 0}
   txtPregunta2: {fileID: 1494413012}
+  contadorPreguntas: 0
 --- !u!65 &2067810262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11418,6 +11434,7 @@ MonoBehaviour:
   CanvasPreguntas2: {fileID: 0}
   txtPregunta1: {fileID: 1542238974}
   txtPregunta2: {fileID: 0}
+  contadorPreguntas: 0
 --- !u!4 &2071479634
 Transform:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class gameManager : MonoBehaviour
     public Datos misDatos;
     public GameObject panelUI;
     public GameObject canvasPreguntas;
+    public bool[] chPreguntas;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class gameManager : MonoBehaviour
             Debug.Log(s);
             File.WriteAllText(filePat, s);
         }
-
+        chPreguntas =new bool[4];
         
     }
 
