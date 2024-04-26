@@ -18,7 +18,7 @@ public class Checkpoint : MonoBehaviour
         {
             other.GetComponent<Movimientorotacion>().lastCheckpoint = GetComponent<Transform>().position;
             Destroy(gameObject);
-            pregunta = GameObject.Find("gameManager").GetComponent<gameManager>().misDatos.preguntas[indice];
+            pregunta = GameObject.Find("GameManager").GetComponent<gameManager>().misDatos.preguntas[indice];
             CanvasPreguntas1.SetActive(true);
             txtPregunta1.text = pregunta;
         }
