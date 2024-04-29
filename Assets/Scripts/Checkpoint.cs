@@ -12,6 +12,8 @@ public class Checkpoint : MonoBehaviour
     public TMP_Text txtPregunta1,txtPregunta2;
     string pregunta;
     public int contadorPreguntas;
+    public RawImage[] optionsContainer;
+    public Texture texture;
 
     void Start()
     {
@@ -39,6 +41,10 @@ public class Checkpoint : MonoBehaviour
             txtPregunta1.text = pregunta;
             GameObject.Find("GameManager").GetComponent<gameManager>().chPreguntas[indice]=true;
             contadorPreguntas++;
+            //indice = GameObject.Find("GameManager").GetComponent<gameManager>().indice;
+            texture = Resources.Load<Texture>("preguntas/" + indice + "/Casa");
+            optionsContainer[0].texture = texture;
+            
         }
 
         if (other.CompareTag("player2"))
@@ -60,6 +66,8 @@ public class Checkpoint : MonoBehaviour
             txtPregunta2.text =  pregunta;
             GameObject.Find("GameManager").GetComponent<gameManager>().chPreguntas[indice]=true;
             contadorPreguntas++;
+            texture = Resources.Load<Texture>("preguntas/" + indice + "/Casa");
+            optionsContainer[0].texture = texture;
         }
     }
 

@@ -9,6 +9,8 @@ public class Movimientorotacion : MonoBehaviour
     private new Rigidbody rigidbody;
     public float movementSpeed;
     Vector3 velocity = Vector3.zero;
+    public Animator Animator;
+    public bool walking;
     public GameObject PanelPP2;
     public GameObject PanelPP1;
     
@@ -18,6 +20,7 @@ public class Movimientorotacion : MonoBehaviour
     {
         vectorRotacion = this.transform.localEulerAngles;
         rigidbody = GetComponent<Rigidbody>();
+
         
     }
 
@@ -32,10 +35,19 @@ public class Movimientorotacion : MonoBehaviour
                 
                  Vector3 direction = (transform.forward * 1).normalized;
                     rigidbody.velocity = direction * movementSpeed;
+
+                Animator.SetTrigger("Caminar");
+                Animator.ResetTrigger("Idle");
+                walking = true;
+         
             }
              else
             {
             rigidbody.velocity = Vector3.zero;
+
+                Animator.SetTrigger("Idle");
+                Animator.ResetTrigger("Caminar");
+                walking = false;
             }
 
             if (Input.GetKey(KeyCode.DownArrow))
@@ -74,8 +86,10 @@ public class Movimientorotacion : MonoBehaviour
                 vectorRotacion =new Vector3(0,speed*Time.deltaTime,0);
                 //this.transform.localEulerAngles = vectorRotacion;
                 this.transform.Rotate(vectorRotacion,Space.Self);
-            }
 
+                
+            }
+           
             if (Input.GetKey(KeyCode.A))
             {
                 vectorRotacion = -new Vector3(0,speed*Time.deltaTime,0);
@@ -87,6 +101,17 @@ public class Movimientorotacion : MonoBehaviour
             {
                 Vector3 direction = (transform.forward * 1).normalized;
                 rigidbody.velocity = direction * movementSpeed;
+
+                Animator.SetTrigger("CaminarDiko");
+                Animator.ResetTrigger("IdleDiko");
+                walking = true;
+            }
+            else
+            {
+
+                Animator.SetTrigger("IdleDiko");
+                Animator.ResetTrigger("CaminarDiko");
+                walking = false;
             }
 
             if (Input.GetKey(KeyCode.S))

@@ -9,9 +9,11 @@ public class Datos : System.Object
 
     [SerializeField]
     public List<string> preguntas;
-        
 
-        public Datos()
+    
+
+
+    public Datos()
         {
 
         }

@@ -10,6 +10,8 @@ public class gameManager : MonoBehaviour
     public GameObject panelUI;
     public GameObject canvasPreguntas;
     public bool[] chPreguntas;
+    public int indice;
+    public Texture texture;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,17 +30,20 @@ public class gameManager : MonoBehaviour
             s = JsonUtility.ToJson(misDatos, true);
             Debug.Log(s);
             File.WriteAllText(filePat, s);
+
+            
         }
         chPreguntas =new bool[4];
         
     }
 
+
     public void guardaDatos()
-        {
-            string filePat = Application.streamingAssetsPath + "/" + "data1.json";
-            string s = JsonUtility.ToJson(misDatos, true);
-            File.WriteAllText(filePat, s);
-        }
+    {
+        string filePat = Application.streamingAssetsPath + "/" + "data1.json";
+        string s = JsonUtility.ToJson(misDatos, true);
+        File.WriteAllText(filePat, s);
+    }
 
     public void guardaArchivo()
     {
