@@ -24,7 +24,7 @@ public class Checkpoint : MonoBehaviour
     {
         if(other.CompareTag("player1"))
         {
-            if(contadorPreguntas<=3)
+            if (contadorPreguntas<=3)
             {
                 bool repetido= true;
                 while(repetido == true)
@@ -44,8 +44,13 @@ public class Checkpoint : MonoBehaviour
             //indice = GameObject.Find("GameManager").GetComponent<gameManager>().indice;
             texture = Resources.Load<Texture>("preguntas/" + indice + "/Casa");
             optionsContainer[0].texture = texture;
+
+            other.GetComponent<Movimientorotacion>().movimientoP1 = false;
             
+
+
         }
+
 
         if (other.CompareTag("player2"))
         {
@@ -68,6 +73,8 @@ public class Checkpoint : MonoBehaviour
             contadorPreguntas++;
             texture = Resources.Load<Texture>("preguntas/" + indice + "/Casa");
             optionsContainer[0].texture = texture;
+
+            other.GetComponent<Movimientorotacion>().movimientoP2 = false;
         }
     }
 

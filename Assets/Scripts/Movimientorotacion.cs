@@ -15,6 +15,8 @@ public class Movimientorotacion : MonoBehaviour
     public GameObject PanelPP1;
     
     public Vector3 lastCheckpoint;
+    public bool movimientoP1=true;
+    public bool movimientoP2=true;
 
     void Start()
     {
@@ -30,7 +32,7 @@ public class Movimientorotacion : MonoBehaviour
         if(this.tag=="player1")
         { 
             
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow)&& movimientoP1)
             {
                 
                  Vector3 direction = (transform.forward * 1).normalized;
@@ -50,37 +52,35 @@ public class Movimientorotacion : MonoBehaviour
                 walking = false;
             }
 
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.DownArrow) && movimientoP1)
             {
                 Vector3 direction = (transform.forward * -1).normalized;
                     rigidbody.velocity = direction * movementSpeed;
             }
 
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow) && movimientoP1)
             {
                 vectorRotacion =new Vector3(0,speed*Time.deltaTime,0);
                 //this.transform.localEulerAngles = vectorRotacion;
                 this.transform.Rotate(vectorRotacion,Space.Self);
             }
 
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.LeftArrow) && movimientoP1)
             {
                 vectorRotacion =- new Vector3(0,speed*Time.deltaTime,0);
                 //this.transform.localEulerAngles = vectorRotacion;
                 this.transform.Rotate(vectorRotacion,Space.Self);
             }
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                PanelPP1.SetActive(false);
-                Time.timeScale = 1f;
-                transform.position = lastCheckpoint;
 
+            if (Input.GetKey(KeyCode.M))
+            {
+                movimientoP1 = true;
             }
         }
 
         if(this.tag=="player2")
         {
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) && movimientoP2)
             {
                 
                 vectorRotacion =new Vector3(0,speed*Time.deltaTime,0);
@@ -90,14 +90,14 @@ public class Movimientorotacion : MonoBehaviour
                 
             }
            
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) && movimientoP2)
             {
                 vectorRotacion = -new Vector3(0,speed*Time.deltaTime,0);
                 //this.transform.localEulerAngles = vectorRotacion;
                 this.transform.Rotate(vectorRotacion,Space.Self);
             }
 
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.W) && movimientoP2)
             {
                 Vector3 direction = (transform.forward * 1).normalized;
                 rigidbody.velocity = direction * movementSpeed;
@@ -114,17 +114,15 @@ public class Movimientorotacion : MonoBehaviour
                 walking = false;
             }
 
-            if (Input.GetKey(KeyCode.S))
+            if (Input.GetKey(KeyCode.S) && movimientoP2)
             {
                 Vector3 direction = (transform.forward * -1).normalized;
                 rigidbody.velocity = direction * movementSpeed;
             }
             if (Input.GetKeyDown(KeyCode.E))
             {
-                PanelPP2.SetActive(false);
-                Time.timeScale = 1f;
-                transform.position = lastCheckpoint;
 
+                movimientoP2 = true;
             }
         }
     }
