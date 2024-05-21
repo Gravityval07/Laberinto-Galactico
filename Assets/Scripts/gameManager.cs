@@ -32,8 +32,13 @@ public class gameManager : MonoBehaviour
             File.WriteAllText(filePat, s);
 
             
+        }else{
+            misDatos = new Datos();
+            string s = JsonUtility.ToJson(misDatos, true);
+            Debug.Log(s);
+            File.WriteAllText(filePat, s);            
         }
-        chPreguntas =new bool[4];
+        chPreguntas =new bool[8];
         
     }
 

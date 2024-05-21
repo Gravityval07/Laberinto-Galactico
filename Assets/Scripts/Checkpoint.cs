@@ -29,14 +29,14 @@ public class Checkpoint : MonoBehaviour
                 bool repetido= true;
                 while(repetido == true)
                 {
-                    indice=Random.Range(0,4);
+                    indice=Random.Range(0,7);
                     repetido= GameObject.Find("GameManager").GetComponent<gameManager>().chPreguntas[indice];
                 }
             }
 
             other.GetComponent<Movimientorotacion>().lastCheckpoint = GetComponent<Transform>().position;
             Destroy(gameObject);
-            pregunta = GameObject.Find("GameManager").GetComponent<gameManager>().misDatos.preguntas[indice];
+            pregunta = GameObject.Find("GameManager").GetComponent<gameManager>().misDatos.preguntas[indice].preguntaTexto;
             CanvasPreguntas1.SetActive(true);
             txtPregunta1.text = pregunta;
             GameObject.Find("GameManager").GetComponent<gameManager>().chPreguntas[indice]=true;
@@ -59,14 +59,14 @@ public class Checkpoint : MonoBehaviour
                 bool repetido= true;
                 while(repetido == true)
                 {
-                    indice=Random.Range(0,4);
+                    indice=Random.Range(0,7);
                     repetido=GameObject.Find("GameManager").GetComponent<gameManager>().chPreguntas[indice];
                 }
             }
 
             other.GetComponent<Movimientorotacion>().lastCheckpoint = GetComponent<Transform>().position;
             Destroy(gameObject);
-            pregunta = GameObject.Find("GameManager").GetComponent<gameManager>().misDatos.preguntas[indice];
+            pregunta = GameObject.Find("GameManager").GetComponent<gameManager>().misDatos.preguntas[indice].preguntaTexto;
             CanvasPreguntas2.SetActive(true);
             txtPregunta2.text =  pregunta;
             GameObject.Find("GameManager").GetComponent<gameManager>().chPreguntas[indice]=true;

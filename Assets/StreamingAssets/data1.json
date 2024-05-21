@@ -1,8 +1,60 @@
 {
     "preguntas": [
-        "¿Cómo se escribe “perro y gato” en inglés?",
-        "What is this?",
-        "What color is green?",
-        "What is the opposite of “Left”?"
+        {
+            "preguntaTexto": "¿Cómo se escribe “perro y gato” en inglés?",
+            "respuesta1": "Dogo and Cato",
+            "respuesta2": "Dog",
+            "respuesta3": "Dog and Cat",
+            "respuesta4": "Perro and Cat"
+        },
+        {
+            "preguntaTexto": "What is this?",
+            "respuesta1": "Casita",
+            "respuesta2": "House",
+            "respuesta3": "Jaus",
+            "respuesta4": "Hogar"
+        },
+        {
+            "preguntaTexto": "What color is green?",
+            "respuesta1": "Respuesta1",
+            "respuesta2": "Respuesta2",
+            "respuesta3": "Respuesta3",
+            "respuesta4": "Respuesta4"
+        },
+        {
+            "preguntaTexto": "What is the opposite of “Left?",
+            "respuesta1": "Right",
+            "respuesta2": "Up",
+            "respuesta3": "Down",
+            "respuesta4": "On"
+        },
+        {
+            "preguntaTexto": "¿La CPU es conocida como el cerebro de la computadora?",
+            "respuesta1": "Verdadero",
+            "respuesta2": "Falso",
+            "respuesta3": "",
+            "respuesta4": ""
+        },
+        {
+            "preguntaTexto": "¿Para qué sirve Powerpoint?",
+            "respuesta1": "Para hacer hojas de cálculo",
+            "respuesta2": "Para escribir textos",
+            "respuesta3": "Para presentar diapositivas",
+            "respuesta4": "Para hacer videollamadas"
+        },
+        {
+            "preguntaTexto": "¿Qué programa es el siguiente?",
+            "respuesta1": "Powerpoint",
+            "respuesta2": "Excel",
+            "respuesta3": "Paint",
+            "respuesta4": "Papelera de reciclaje"
+        },
+        {
+            "preguntaTexto": "¿Un mouse es un Hardware o un Software?",
+            "respuesta1": "Software",
+            "respuesta2": "Hardware",
+            "respuesta3": "",
+            "respuesta4": ""
+        }
     ]
 }
