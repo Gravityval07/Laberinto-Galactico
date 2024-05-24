@@ -46,9 +46,9 @@ public class pregunta : System.Object
     public string respuesta4;
     public pregunta(){
         this.preguntaTexto="PreguntaEjemplo";
-        this.respuesta1 = "Respuesta1";
-        this.respuesta2 = "Respuesta2";
-        this.respuesta3 = "Respuesta3";
-        this.respuesta4 = "Respuesta4";
+        //this.respuesta1 = respuesta1;
+        //this.respuesta2 = respuesta2;
+        //this.respuesta3 = respuesta3;
+        //this.respuesta4 = respuesta4;
     }
 }

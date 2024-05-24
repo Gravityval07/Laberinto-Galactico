@@ -9,7 +9,7 @@ public class gameManager : MonoBehaviour
     public Datos misDatos;
     public GameObject panelUI;
     public GameObject canvasPreguntas;
-    public bool[] chPreguntas;
+    public bool[] chPreguntas1, chPreguntas2;
     public int indice;
     public Texture texture;
     // Start is called before the first frame update
@@ -18,7 +18,6 @@ public class gameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         DontDestroyOnLoad(canvasPreguntas.gameObject);
 
-        
 
         string filePat = Application.streamingAssetsPath + "/" + "data1.json";
 
@@ -38,8 +37,9 @@ public class gameManager : MonoBehaviour
             Debug.Log(s);
             File.WriteAllText(filePat, s);            
         }
-        chPreguntas =new bool[8];
-        
+        chPreguntas1 =new bool[8];
+        chPreguntas2 = new bool[8];
+
     }
 
 

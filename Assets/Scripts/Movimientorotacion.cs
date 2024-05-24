@@ -18,6 +18,9 @@ public class Movimientorotacion : MonoBehaviour
     public bool movimientoP1=true;
     public bool movimientoP2=true;
 
+    public GameObject CanvasPreguntas1, CanvasPreguntas2;
+
+
     void Start()
     {
         vectorRotacion = this.transform.localEulerAngles;
@@ -75,6 +78,7 @@ public class Movimientorotacion : MonoBehaviour
             if (Input.GetKey(KeyCode.M))
             {
                 movimientoP1 = true;
+                CanvasPreguntas1.SetActive(false);
             }
         }
 
@@ -121,8 +125,9 @@ public class Movimientorotacion : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.E))
             {
-
                 movimientoP2 = true;
+                CanvasPreguntas2.SetActive(false);
+                ;
             }
         }
     }
