@@ -44,6 +44,10 @@ public class pregunta : System.Object
     public string respuesta3;
     [SerializeField]
     public string respuesta4;
+    [SerializeField]
+    public string respuestaCorrecta;
+    [SerializeField]
+    public string respuestaCorrecta2;
     public pregunta(){
         this.preguntaTexto="PreguntaEjemplo";
         //this.respuesta1 = respuesta1;
@@ -51,4 +55,5 @@ public class pregunta : System.Object
         //this.respuesta3 = respuesta3;
         //this.respuesta4 = respuesta4;
     }
+
 }

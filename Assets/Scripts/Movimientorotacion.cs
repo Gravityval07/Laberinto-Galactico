@@ -15,41 +15,44 @@ public class Movimientorotacion : MonoBehaviour
     public GameObject PanelPP1;
     
     public Vector3 lastCheckpoint;
+    public Vector3 pastCheckpoint;
+    public bool tp=false;
+
+    public Vector3 lastCheckpoint2;
+    public Vector3 pastCheckpoint2;
+    public bool tp2 = false;
+
     public bool movimientoP1=true;
     public bool movimientoP2=true;
 
     public GameObject CanvasPreguntas1, CanvasPreguntas2;
 
-
     void Start()
     {
         vectorRotacion = this.transform.localEulerAngles;
         rigidbody = GetComponent<Rigidbody>();
+        pastCheckpoint = new Vector3(-8.597191f, 0.114f, -4.239875f);
+        lastCheckpoint = new Vector3(-8.597191f, 0.114f, -4.239875f);
 
-        
+        pastCheckpoint2 = new Vector3(5.735f, 0.114f, -3.217f);
+        lastCheckpoint2 = new Vector3(5.735f, 0.114f, -3.217f);
     }
 
     void Update()
     { 
-        
         if(this.tag=="player1")
         { 
-            
             if (Input.GetKey(KeyCode.UpArrow)&& movimientoP1)
             {
-                
-                 Vector3 direction = (transform.forward * 1).normalized;
-                    rigidbody.velocity = direction * movementSpeed;
-
+                Vector3 direction = (transform.forward * 1).normalized;
+                rigidbody.velocity = direction * movementSpeed;
                 Animator.SetTrigger("Caminar");
                 Animator.ResetTrigger("Idle");
                 walking = true;
-         
             }
-             else
+            else
             {
-            rigidbody.velocity = Vector3.zero;
-
+                rigidbody.velocity = Vector3.zero;
                 Animator.SetTrigger("Idle");
                 Animator.ResetTrigger("Caminar");
                 walking = false;
@@ -58,7 +61,7 @@ public class Movimientorotacion : MonoBehaviour
             if (Input.GetKey(KeyCode.DownArrow) && movimientoP1)
             {
                 Vector3 direction = (transform.forward * -1).normalized;
-                    rigidbody.velocity = direction * movementSpeed;
+                rigidbody.velocity = direction * movementSpeed;
             }
 
             if (Input.GetKey(KeyCode.RightArrow) && movimientoP1)
@@ -74,24 +77,21 @@ public class Movimientorotacion : MonoBehaviour
                 //this.transform.localEulerAngles = vectorRotacion;
                 this.transform.Rotate(vectorRotacion,Space.Self);
             }
-
-            if (Input.GetKey(KeyCode.M))
+            
+            if (GameObject.Find("GameManager").GetComponent<gameManager>().tp)
             {
-                movimientoP1 = true;
-                CanvasPreguntas1.SetActive(false);
+                transform.position = pastCheckpoint;
+                GameObject.Find("GameManager").GetComponent<gameManager>().tp = false;
             }
         }
 
-        if(this.tag=="player2")
+        if (this.tag=="player2")
         {
             if (Input.GetKey(KeyCode.D) && movimientoP2)
             {
-                
                 vectorRotacion =new Vector3(0,speed*Time.deltaTime,0);
                 //this.transform.localEulerAngles = vectorRotacion;
                 this.transform.Rotate(vectorRotacion,Space.Self);
-
-                
             }
            
             if (Input.GetKey(KeyCode.A) && movimientoP2)
@@ -123,11 +123,10 @@ public class Movimientorotacion : MonoBehaviour
                 Vector3 direction = (transform.forward * -1).normalized;
                 rigidbody.velocity = direction * movementSpeed;
             }
-            if (Input.GetKeyDown(KeyCode.E))
+            if (GameObject.Find("GameManager").GetComponent<gameManager>().tp2)
             {
-                movimientoP2 = true;
-                CanvasPreguntas2.SetActive(false);
-                ;
+                transform.position = pastCheckpoint2;
+                GameObject.Find("GameManager").GetComponent<gameManager>().tp2 = false;
             }
         }
     }

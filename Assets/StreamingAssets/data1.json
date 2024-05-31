@@ -5,56 +5,72 @@
             "respuesta1": "Dogo and Cato",
             "respuesta2": "Dog",
             "respuesta3": "Dog and Cat",
-            "respuesta4": "Perro and Cat"
+            "respuesta4": "Perro and Cat",
+            "respuestaCorrecta": "Dog and Cat",
+            "respuestaCorrecta2": "Dog and Cat"
         },
         {
             "preguntaTexto": "What is this?",
             "respuesta1": "Casita",
             "respuesta2": "House",
             "respuesta3": "Jaus",
-            "respuesta4": "Hogar"
+            "respuesta4": "Hogar",
+            "respuestaCorrecta": "House",
+            "respuestaCorrecta2": "House"
         },
         {
             "preguntaTexto": "What color is green?",
             "respuesta1": "Respuesta1",
             "respuesta2": "Respuesta2",
             "respuesta3": "Respuesta3",
-            "respuesta4": "Respuesta4"
+            "respuesta4": "Respuesta4",
+            "respuestaCorrecta": "Respuesta2",
+            "respuestaCorrecta2": "Respuesta2"
         },
         {
             "preguntaTexto": "What is the opposite of “Left?",
             "respuesta1": "Right",
             "respuesta2": "Up",
             "respuesta3": "Down",
-            "respuesta4": "On"
+            "respuesta4": "On",
+            "respuestaCorrecta": "Right",
+            "respuestaCorrecta2": "Right"
         },
         {
             "preguntaTexto": "¿La CPU es conocida como el cerebro de la computadora?",
             "respuesta1": "Verdadero",
             "respuesta2": "Falso",
             "respuesta3": "",
-            "respuesta4": ""
+            "respuesta4": "",
+            "respuestaCorrecta": "Verdadero",
+            "respuestaCorrecta2": "Verdadero"
         },
         {
             "preguntaTexto": "¿Para qué sirve Powerpoint?",
             "respuesta1": "Para hacer hojas de cálculo",
             "respuesta2": "Para escribir textos",
             "respuesta3": "Para presentar diapositivas",
-            "respuesta4": "Para hacer videollamadas"
+            "respuesta4": "Para hacer videollamadas",
+            "respuestaCorrecta": "Para presentar diapositivas",
+            "respuestaCorrecta2": "Para presentar diapositivas"
         },
         {
             "preguntaTexto": "¿Qué programa es el siguiente?",
             "respuesta1": "Powerpoint",
             "respuesta2": "Excel",
             "respuesta3": "Paint",
-            "respuesta4": "Papelera de reciclaje"
+            "respuesta4": "Papelera de reciclaje",
+            "respuestaCorrecta": "Paint",
+            "respuestaCorrecta2": "Paint"
         },
         {
             "preguntaTexto": "¿Un mouse es un Hardware o un Software?",
             "respuesta1": "Software",
             "respuesta2": "Hardware",
             "respuesta3": "",
-            "respuesta4": ""
+            "respuesta4": "",
+            "respuestaCorrecta": "Hardware",
+            "respuestaCorrecta2": "Hardware"
         }
     ]
 }
