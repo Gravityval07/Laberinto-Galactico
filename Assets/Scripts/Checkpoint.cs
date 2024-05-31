@@ -48,6 +48,7 @@ public class Checkpoint : MonoBehaviour
                     indice = Random.Range(0, 8);
                     repetido = GameObject.Find("GameManager").GetComponent<gameManager>().chPreguntas1[indice];
                 }
+                GameObject.Find("GameManager").GetComponent<gameManager>().indice = indice;
             }
             if (!checkP1)
             {
@@ -91,6 +92,7 @@ public class Checkpoint : MonoBehaviour
                     indice = Random.Range(0, 8);
                     repetido = GameObject.Find("GameManager").GetComponent<gameManager>().chPreguntas2[indice];
                 }
+                GameObject.Find("GameManager").GetComponent<gameManager>().indice = indice;
             }
             if (!checkP2)
             {

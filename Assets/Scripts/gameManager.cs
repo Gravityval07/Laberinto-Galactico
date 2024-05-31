@@ -58,8 +58,8 @@ public class gameManager : MonoBehaviour
             Debug.Log(s);
             File.WriteAllText(filePat, s);            
         }
-        chPreguntas1 =new bool[8];
-        chPreguntas2 = new bool[8];
+        chPreguntas1 =new bool[9];
+        chPreguntas2 = new bool[9];
 
     }
 
@@ -94,6 +94,7 @@ public class gameManager : MonoBehaviour
                 Destroy(CheckpointAct);
                 CheckpointAct = null;
                 chPreguntas1[indice] = true;
+                Debug.Log("logrado" + indexButton);
             }
             checkP1 = false;
         }
@@ -119,7 +120,7 @@ public class gameManager : MonoBehaviour
             {
                  Destroy(CheckpointAct2);
                 CheckpointAct2 = null;
-                chPreguntas2[indice] = true;
+                chPreguntas2[indexButton] = true;
             }
             checkP2 = false;
         }
