@@ -16,6 +16,8 @@ public class Movimientorotacion : MonoBehaviour
     
     public Vector3 lastCheckpoint;
     public Vector3 pastCheckpoint;
+    public Quaternion rotacionp1, rotacionp2;
+    public Quaternion rotacion1, rotacion2;
     public bool tp=false;
 
     public Vector3 lastCheckpoint2;
@@ -33,9 +35,13 @@ public class Movimientorotacion : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         pastCheckpoint = new Vector3(-8.597191f, 0.114f, -4.239875f);
         lastCheckpoint = new Vector3(-8.597191f, 0.114f, -4.239875f);
-
+        rotacionp1 = new Quaternion(0, 0, 0, 0);
+        rotacion1 = new Quaternion(0, 0, 0, 0);
+        
         pastCheckpoint2 = new Vector3(5.735f, 0.114f, -3.217f);
         lastCheckpoint2 = new Vector3(5.735f, 0.114f, -3.217f);
+        rotacionp2 = new Quaternion(0, -90, 0, 0);
+        rotacion2 = new Quaternion(0, -90, 0, 0);
     }
 
     void Update()
@@ -80,6 +86,7 @@ public class Movimientorotacion : MonoBehaviour
             
             if (GameObject.Find("GameManager").GetComponent<gameManager>().tp)
             {
+                transform.rotation = rotacionp1;
                 transform.position = pastCheckpoint;
                 GameObject.Find("GameManager").GetComponent<gameManager>().tp = false;
             }
@@ -125,6 +132,7 @@ public class Movimientorotacion : MonoBehaviour
             }
             if (GameObject.Find("GameManager").GetComponent<gameManager>().tp2)
             {
+                transform.rotation = rotacionp2;
                 transform.position = pastCheckpoint2;
                 GameObject.Find("GameManager").GetComponent<gameManager>().tp2 = false;
             }

@@ -25,6 +25,8 @@ public class gameManager : MonoBehaviour
     public GameObject CheckpointAct2;
 
     public Vector3 lastCheckpoint;
+    public Vector3 rotacion1, rotacion2;
+    public Vector3 rotacionp1, rotacionp2;
     public Vector3 pastCheckpoint;
     public Vector3 lastCheckpoint2;
     public Vector3 pastCheckpoint2;
@@ -104,7 +106,9 @@ public class gameManager : MonoBehaviour
             Debug.Log("Respuesta falsa");
             tp = true;
             checkP1 = true;
+            Debug.Log(checkP1 + "gm");
         }
+        
         CanvasPreguntas1.SetActive(false);
     }
 
@@ -118,9 +122,9 @@ public class gameManager : MonoBehaviour
             player2.GetComponent<Movimientorotacion>().movimientoP2 = true;
             if (CheckpointAct2 != null)
             {
-                 Destroy(CheckpointAct2);
+                Destroy(CheckpointAct2);
                 CheckpointAct2 = null;
-                chPreguntas2[indexButton] = true;
+                chPreguntas2[indice] = true;
             }
             checkP2 = false;
         }

@@ -32,6 +32,7 @@ public class Checkpoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log(checkP1);
         if (other.CompareTag("player1"))
         {
             gameManager gm = FindObjectOfType<gameManager>();
@@ -50,10 +51,13 @@ public class Checkpoint : MonoBehaviour
                 }
                 GameObject.Find("GameManager").GetComponent<gameManager>().indice = indice;
             }
+            checkP1 = GameObject.Find("GameManager").GetComponent<gameManager>().checkP1;
             if (!checkP1)
             {
                 other.GetComponent<Movimientorotacion>().pastCheckpoint = other.GetComponent<Movimientorotacion>().lastCheckpoint;
+                other.GetComponent<Movimientorotacion>().rotacionp1 = other.GetComponent<Movimientorotacion>().rotacion1;
                 other.GetComponent<Movimientorotacion>().lastCheckpoint = GetComponent<Transform>().position;
+                other.GetComponent<Movimientorotacion>().rotacion1 = GetComponent<Transform>().rotation;
             }
 
             pregunta = GameObject.Find("GameManager").GetComponent<gameManager>().misDatos.preguntas[indice].preguntaTexto;
@@ -94,11 +98,13 @@ public class Checkpoint : MonoBehaviour
                 }
                 GameObject.Find("GameManager").GetComponent<gameManager>().indice = indice;
             }
+            checkP2 = GameObject.Find("GameManager").GetComponent<gameManager>().checkP2;
             if (!checkP2)
             {
                 other.GetComponent<Movimientorotacion>().pastCheckpoint2 = other.GetComponent<Movimientorotacion>().lastCheckpoint2;
+                other.GetComponent<Movimientorotacion>().rotacionp2 = other.GetComponent<Movimientorotacion>().rotacion2;
                 other.GetComponent<Movimientorotacion>().lastCheckpoint2 = GetComponent<Transform>().position;
-                Debug.Log("pasa2");
+                other.GetComponent<Movimientorotacion>().rotacion2 = GetComponent<Transform>().rotation;
             }
 
             other.GetComponent<Movimientorotacion>().lastCheckpoint = GetComponent<Transform>().position;
