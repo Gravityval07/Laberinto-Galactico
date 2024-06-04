@@ -19,13 +19,13 @@
             "respuestaCorrecta2": "House"
         },
         {
-            "preguntaTexto": "What color is green?",
-            "respuesta1": "Respuesta1",
-            "respuesta2": "Respuesta2",
-            "respuesta3": "Respuesta3",
-            "respuesta4": "Respuesta4",
-            "respuestaCorrecta": "Respuesta2",
-            "respuestaCorrecta2": "Respuesta2"
+            "preguntaTexto": "What is this color?",
+            "respuesta1": "Yellow",
+            "respuesta2": "Green",
+            "respuesta3": "Blue",
+            "respuesta4": "Pink",
+            "respuestaCorrecta": "Green",
+            "respuestaCorrecta2": "Green"
         },
         {
             "preguntaTexto": "What is the opposite of “Left?",

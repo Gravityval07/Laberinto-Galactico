@@ -96,7 +96,6 @@ public class gameManager : MonoBehaviour
                 Destroy(CheckpointAct);
                 CheckpointAct = null;
                 chPreguntas1[indice] = true;
-                Debug.Log("logrado" + indexButton);
             }
             checkP1 = false;
         }
